@@ -6,17 +6,17 @@ import '../styles/components/Header.styl';
 const Header = props => (
   <div className="Header">
     <h1 className="Header-title">
-      <Link to="/">
-        Platzi Store
-      </Link>
+      <Link to="/">Platzi Store</Link>
     </h1>
     <div className="Header-checkout">
       <Link to="/checkout">
         <i className="fas fa-shopping-basket" />
       </Link>
-      {props.cart.length > 0 &&
-        <div className="Header-alert">{props.cart.length}</div>
-      }
+      {props.cart.length > 0 && (
+        <div className="Header-alert">
+          {props.cart.length}
+        </div>
+      )}
     </div>
   </div>
 );

@@ -7,7 +7,7 @@
     "build": "webpack --mode production",
     "start": "webpack-dev-server --open --mode development",
     "format": "prettier --write '{*.js,src/**/*.{js,jsx}}'",
-    "lint": "eslint src/",
+    "lint": "eslint src/**/*.{js,jsx}",
     "test": "jest",
     "test:watch": "jest --watch"
   },
@@ -47,6 +47,7 @@
     "webpack-cli": "^3.3.10"
   },
   "devDependencies": {
+    "@types/jest": "^29.4.0",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.15.1",
@@ -68,12 +69,9 @@
   },
   "homepage": "https://github.com/gndx/platzi-store/#readme",
   "jest": {
-    "verbose": true,
-    "setupFilesAfterEnv": [
-      "<rootDir>/src/__test__/setupTest.js"
-    ],
+    "setupFilesAfterEnv": ["<rootDir>/src/__test__/setup.js"],
     "moduleNameMapper": {
-      "\\.(styl|css)$": "<rootDir>/src/__mocks__/styleMock.js"
+      "\\.(styl|css)$": "<rootDir>/src/__mocks__/style.mock.js"
     }
   }
 }
