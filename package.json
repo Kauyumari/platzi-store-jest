@@ -61,7 +61,7 @@
     "jest": "^24.9.0",
     "jest-fetch-mock": "^2.1.2",
     "prettier": "^1.19.1",
-    "react-test-renderer": "^16.12.0",
+    "react-test-renderer": "^16.14.0",
     "webpack-dev-server": "^3.9.0"
   },
   "bugs": {
@@ -69,7 +69,10 @@
   },
   "homepage": "https://github.com/gndx/platzi-store/#readme",
   "jest": {
-    "setupFilesAfterEnv": ["<rootDir>/src/__test__/setup.js"],
+    "verbose": true,
+    "setupFilesAfterEnv": [
+      "<rootDir>/src/__test__/setup.js"
+    ],
     "moduleNameMapper": {
       "\\.(styl|css)$": "<rootDir>/src/__mocks__/style.mock.js"
     }
